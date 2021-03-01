@@ -13,6 +13,16 @@ function init()
     fadeOut(imgfrtJavascript,5000);
 }
 
+function setImgUrl(el,arr)
+{
+    if(curImg == arr.length)
+    {
+        curImg = 0;
+    }
+    el.src = arr[curImg];
+    console.log("current image " + curImg + ":" +arr[curImg]);
+    curImg++;
+}
 function fadeOut(el, duration)
 {
     let s = el.style;
@@ -26,12 +36,14 @@ function fadeOut(el, duration)
             console.log("1/2");
             factor = -1;
             setTimeout(fade, 25);
+            setImgUrl(imgfrtJavascript, imgArray);
         }
 
         else if(s.opacity > 1 && factor == -1)
         {
             console.log("2/2");
             factor = 1;
+            setImgUrl(imgbckJavascript,imgArray);
             fade();
         }
         else
