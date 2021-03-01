@@ -14,14 +14,26 @@ function fadeOut(el, duration)
 {
     let s = el.style;
     let step = 25/duration;
-    s.opacity = 1;
+    let factor = 1;
 
     function fade()
     {
-        console.log('opacity: '+s.opacity);
-        if(s.opacity > 0)
+        if(s.opacity < 0 && factor == 1)
         {
-            s.opacity = s.opacity - step;
+            console.log("1/2");
+            factor = -1;
+            setTimeout(fade, 25);
+        }
+
+        else if(s.opacity > 1 && factor == -1)
+        {
+            console.log("2/2");
+            factor = 1;
+            fade();
+        }
+        else
+        {
+            s.opacity = s.opacity - (step*factor)
             setTimeout(fade, 25);
         }
     }
