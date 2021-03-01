@@ -1,13 +1,30 @@
 window.onload = init;
 
-let imgfrt;
-let imgbck;
+let imgfrtJavascript;
+let imgbckJavascript;
 
 function init()
 {
-    imgbck = document.getElementById('imgbck');
-    imgfrt = document.getElementById('imgfrt');
-    imgfrt.style.opacity = 0.7;
+    imgbckJavascript = document.getElementById('imgbck');
+    imgfrtJavascript = document.getElementById('imgfrt');
+    fadeOut(imgfrtJavascript,3000);
 }
 
+function fadeOut(el, duration)
+{
+    let s = el.style;
+    let step = 25/duration;
+    s.opacity = 1;
+
+    function fade()
+    {
+        console.log('opacity: '+s.opacity);
+        if(s.opacity > 0)
+        {
+            s.opacity = s.opacity - step;
+            setTimeout(fade, 25);
+        }
+    }
+    fade();
+}
 
