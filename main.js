@@ -7,7 +7,10 @@ function init()
 {
     imgbckJavascript = document.getElementById('imgbck');
     imgfrtJavascript = document.getElementById('imgfrt');
-    fadeOut(imgfrtJavascript,3000);
+    imgArray = ['https://wallpaperaccess.com/full/96462.jpg', 'https://i.pinimg.com/originals/af/8e/d3/af8ed3265ed9b78d34f2340b5bb42b71.jpg',
+    'https://wallpapercave.com/wp/wp3386769.jpg', 'https://s1.1zoom.me/b5050/562/France_Sunrises_and_sunsets_Mountains_Stones_566654_1920x1080.jpg'];
+    curImg = 0;
+    fadeOut(imgfrtJavascript,5000);
 }
 
 function fadeOut(el, duration)
