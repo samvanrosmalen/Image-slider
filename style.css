@@ -1,10 +1,10 @@
-.img {
+.slider {
     position: absolute;
-    size: 12ch;
+    
 }
 
 h1.title{
-   font-size: 50px;
+   font-size: 60px;
    text-align: center;
    font-style: italic;
 }
