@@ -1,0 +1,10 @@
+.img {
+    position: absolute;
+    size: 12ch;
+}
+
+h1.title{
+   font-size: 50px;
+   text-align: center;
+   font-style: italic;
+}
