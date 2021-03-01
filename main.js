@@ -33,7 +33,7 @@ function fadeOut(el, duration)
     {
         if(s.opacity < 0 && factor == 1)
         {
-            console.log("1/2");
+            
             factor = -1;
             setTimeout(fade, 25);
             setImgUrl(imgfrtJavascript, imgArray);
@@ -41,7 +41,7 @@ function fadeOut(el, duration)
 
         else if(s.opacity > 1 && factor == -1)
         {
-            console.log("2/2");
+            
             factor = 1;
             setImgUrl(imgbckJavascript,imgArray);
             fade();
